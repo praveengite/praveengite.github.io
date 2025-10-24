@@ -1,140 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Praveen Gite — Network Engineer & ISP Consultant</title>
-  <meta name="description" content="Praveen Gite — Network engineer, ISP founder (Winux). MikroTik RouterOS v7, BGP/traffic engineering, FTTH/GPON, PPPoE/IPv6, IX peering, NetFlow/Akvorado, automation, and NOC workflows." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Praveen Gite — ISP Consultant | Network Architect | Compliance Advisor</title>
+  <meta name="description" content="Portfolio of Praveen Gite: ISP consultant, network architect, strategist, DoT compliance assistance, and managed network services. Founder of Winux Internet & Communication Technologies."/>
+  <meta name="theme-color" content="#6bb3ff"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50:  '#eef6ff',
+              100: '#d9ecff',
+              200: '#bfe0ff',
+              300: '#9fd1ff',
+              400: '#7cc0ff',
+              500: '#6bb3ff', /* pastel blue primary */
+              600: '#4a92e6',
+              700: '#3a76bf',
+              800: '#2f5e99',
+              900: '#284f80'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(107, 179, 255, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    :root{--bg:#0b1220;--card:#0f172a;--fg:#e5e7eb;--muted:#9ca3af;--accent:#60a5fa;--ring:rgba(96,165,250,.3)}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0a0f1c, #0b1220 35%, #0e1526);color:var(--fg)}
-    a{color:var(--accent);text-decoration:none}
-    .container{max-width:1024px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:40px;height:40px;border-radius:12px;background:radial-gradient(120% 120% at 10% 10%, #93c5fd, #60a5fa 35%, #2563eb 70%);box-shadow:0 10px 30px rgba(37,99,235,.35)}
-    .brand h1{font-size:18px;margin:0}
-    nav{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:10px;transition:.2s background}
-    nav a:hover{background:rgba(96,165,250,.12)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:28px;background:linear-gradient(180deg,rgba(96,165,250,.06),rgba(96,165,250,0));border:1px solid rgba(148,163,184,.15);border-radius:18px}
-    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:12px}
-    .title{font-size:34px;line-height:1.15;margin:8px 0 12px}
-    .subtitle{color:var(--muted);margin:0 0 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:600;border:1px solid rgba(148,163,184,.2);background:#1f2937;color:#fff}
-    .btn.primary{background:#2563eb;border-color:#2563eb}
-    .btn:hover{box-shadow:0 0 0 4px var(--ring)}
-    .card{background:var(--card);border:1px solid rgba(148,163,184,.15);border-radius:16px;padding:20px}
-    .grid{display:grid;gap:16px}
-    .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    h2{font-size:18px;margin:0 0 10px}
-    .list{margin:0;padding-left:18px;color:#cbd5e1}
-    .badge{display:inline-block;background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.4);color:#bfdbfe;padding:4px 8px;border-radius:999px;font-size:12px;margin:4px 6px 0 0}
-    footer{margin:28px 0 8px;color:#94a3b8;font-size:13px}
-    .section{margin-top:26px}
-    .muted{color:var(--muted)}
-    .links-row{display:flex;flex-wrap:wrap;gap:10px}
-    .link-tile{flex:1 1 260px;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:12px;background:linear-gradient(180deg,rgba(148,163,184,.08),rgba(148,163,184,.04));border:1px solid rgba(148,163,184,.15)}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:12px;color:#cbd5e1}
-    @media (max-width:860px){.hero{grid-template-columns:1fr}}
+    /* Print styles for dossier */
+    @media print {
+      .no-print { display:none !important; }
+      .page { box-shadow: none !important; padding: 0 !important; }
+      .section { break-inside: avoid; }
+    }
   </style>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2393c5fd'/%3E%3Cstop offset='1' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='80' height='80' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 40c0-12 9-22 22-22 8 0 15 4 19 10l-7 5c-2-4-6-7-12-7-8 0-14 6-14 14s6 14 14 14c6 0 10-3 12-7l7 5c-4 6-11 10-19 10-13 0-22-10-22-22z' fill='white'/%3E%3C/svg%3E" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Praveen Gite",
-    "jobTitle": "Network Engineer; ISP Founder",
-    "url": "https://geekpraveen.github.io/",
-    "affiliation": {"@type":"Organization","name":"Winux"},
-    "knowsAbout": [
-      "MikroTik RouterOS v7","BGP","Traffic Engineering","FTTH/GPON","PPPoE","IPv6","IX Peering (NIXI, DE-CIX)","NetFlow/Akvorado","Automation","NOC Workflows"
-    ],
+    "jobTitle": "ISP Consultant, Network Architect, Compliance Advisor",
+    "affiliation": {"@type": "Organization","name": "Winux Internet & Communication Technologies"},
+    "url": "https://www.winux.co.in",
     "sameAs": [
-      "https://github.com/geekpraveen"
+      "https://www.linkedin.com/in/praveengite"
+    ],
+    "knowsAbout": [
+      "BGP", "RouterOS v7", "FTTH PON", "IPv6", "NIXI", "DE-CIX", "TRAI", "DoT compliance",
+      "Network monitoring", "Traffic engineering", "ISP operations"
     ]
   }
   </script>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Praveen Gite</h1>
-          <div class="mono">Network Engineer • Founder, Winux</div>
-        </div>
-      </div>
-    </header>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+  <!-- Masthead -->
+  <header class="sticky top-0 backdrop-blur bg-white/80 border-b border-slate-200 z-50 no-print">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- Winux Infinity Mark -->
+        <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow">
+          <path d="M5.5 6.5c3.2-3.2 8.4-3.2 11.6 0l1.4 1.4 1.4-1.4c3.2-3.2 8.4-3.2 11.6 0 3.2 3.2 3.2 8.4 0 11.6-3.2 3.2-8.4 3.2-11.6 0l-1.4-1.4-1.4 1.4c-3.2 3.2-8.4 3.2-11.6 0-3.2-3.2-3.2-8.4 0-11.6z" fill="#6bb3ff"/>
+        </svg>
+        <span class="text-xl font-extrabold tracking-tight">WinuxGroup</span>
+      </a>
+      <nav class="text-sm font-medium hidden md:flex gap-6">
+        <a href="#services" class="hover:text-brand-700">Services</a>
+        <a href="#expertise" class="hover:text-brand-700">Expertise</a>
+        <a href="#contact" class="hover:text-brand-700">Contact</a>
+      </nav>
+      <!--<div class="flex items-center gap-3">
+        <button onclick="window.print()" class="no-print inline-flex items-center rounded-2xl bg-brand-500 px-4 py-2 text-white font-semibold shadow-soft hover:bg-brand-600 focus:outline-none">Download PDF</button>
+      </div>/-->
+    </div>
+  </header>
 
-    <section class="hero section">
-      <div>
-        <div class="kicker">Network Engineering • ISP Architecture</div>
-        <div class="title">MikroTik-first ISP design. BGP that behaves. FTTH that scales.</div>
-        <div class="cta">
-        </div>
-        <div style="margin-top:10px">
-          <span class="badge">RouterOS</span>
-          <span class="badge">BGP</span>
-          <span class="badge">PPPoE QoS</span>
-          <span class="badge">OSPF</span>
-          <span class="badge">MPLS</span>
-          <span class="badge">Dual-Stack</span>
-          <span class="badge">IX Integrations</span>
-          <span class="badge">NetFlows</span>
-          <span class="badge">NMS</span>
-          <span class="badge">NOC Playbooks</span>
-          <span class="badge">FTTx</span>
-          <span class="badge">FiberMap</span>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-5 gap-8 items-center">
+      <div class="lg:col-span-3">
+        <h1 class="text-4xl lg:text-5xl font-black leading-tight tracking-tight text-slate-900">
+          Praveen Gite
+        </h1>
+        <p class="mt-3 text-lg font-semibold text-brand-800">
+          ISP Consultant • Network Architect • Strategy & DoT Compliance Advisory
+        </p>
+        <p class="mt-6 text-slate-700 max-w-2xl">
+          Over a decade building and operating FTTH ISP networks in India. Designing resilient PON access, Multiple ISPs integrations, Milti-vendor integrations, optimized BGP backbones, IX integrations, IPv6 dual-stack, and compliant operations that scale.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">BGP</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">OSPF</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">MPLS</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">FTTH</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">IPv6 Dual Stack</span>
+  		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">PPPoE</span>
+  		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">IPoE</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">RouterOS</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">Huawei</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">Arista</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">NIXI</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">DE-CIX</span>
+          <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">ExtremeIX</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">TP-Link</span>
+		  <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">D-Link</span>
+            <span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">GPON</span>
+					<span class="px-3 py-1 rounded-full text-sm bg-white border border-brand-200">EPON</span>
+
         </div>
       </div>
-      <div class="card">
-        <ul class="list">
-          <li>Network design with dynamic routing; traffic enginnering and steering; BGP; OSPF; MPLS.</li>
-          <li>Enterprise solutions; VPN and remote access management.</li>
-          <li>PPPoE at scale with precise QoS and queue design for customer experience.</li>
-          <li>PPPoE rollout with dual-stack and ONT interoperability workarounds.</li>
-          <li>IX strategy across different Indian IX's; selective primaries/secondaries.</li>
-          <li>Telemetry with NetFlows, NMS actionable alerts, and Chatwoot support workflows.</li>
-          <li>Vendor integration: MikroTik + Huawei + Arista.</li>
+      <div class="lg:col-span-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h2 class="text-sm font-bold tracking-wider text-slate-500">Quick Facts</h2>
+          <dl class="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <dt class="text-slate-500">Experience</dt>
+              <dd class="font-semibold">10+ years</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">Focus</dt>
+              <dd class="font-semibold">FTTH • BGP • IPv6</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">Region</dt>
+              <dd class="font-semibold">India • Tier-2/Tier-3</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500">Brand</dt>
+              <dd class="font-semibold">Winux — We help You win</dd>
+            </div>
+          </dl>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl border border-brand-300 px-4 py-2 font-semibold hover:bg-brand-50">Start an engagement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="page section max-w-6xl mx-auto px-4 py-12 lg:py-16">
+    <h2 class="text-2xl font-extrabold tracking-tight">Consulting Services</h2>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">ISP Network Architecture & Design</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>Access/Distribution/Core blueprints for scalable FTTH</li>
+          <li>E/GPON Planning, IPs and VLANs management, subscriber aggregation & segregation</li>
+          <li>BGP/OSPF core with fast-failover and load-sharing</li>
+          <li>IX/Upstream integrations and capacity planning</li>
         </ul>
-      </div>
-    </section>
-    <section id="links" class="section">
-      <div class="links-row">
-        <a class="link-tile" href="https://winux.co.in" target="_blank" rel="noopener">
-          <span>Winux — Website</span><span class="mono"></span>
-        </a>
-        <a class="link-tile" href="https://kuma.winux.net.in/status/health" target="_blank" rel="noopener">
-          <span>Network Status</span><span class="mono"></span>
-        </a>
-        <a class="link-tile" href="https://selfcare.winux.co.in" target="_blank" rel="noopener">
-          <span>Customer Portal</span><span class="mono"></span>
-        </a>
-      </div>
-    </section>
+      </article>
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">Network Strategy & Optimization</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>Traffic engineering, policy routing and BGP communities</li>
+          <li>Telemetry with NetFlow, Akvorado, Grafana etc</li>
+          <li>ECMP/Failover tuning, latency and cost optimization</li>
+          <li>Capacity forecasting and link planning</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">DoT Compliance Assistance</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>Category A/B/C licensing guidance</li>
+          <li>Audit readiness, IPDR preparedness, subscriber KYC management</li>
+          <li>IRINN/ASN, IP pool records, lawful retention workflows</li>
+          <li>Documentation and AGR preparation</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">Managed Network Services</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>Remote NOC setup and SOPs</li>
+          <li>Automations via scripts/API</li>
+          <li>Monitoring, alerting, escalation maps</li>
+          <li>SLA governance and reporting</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">Business Integration & Scale</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>LCO-to-ISP transition planning</li>
+          <li>Multi-POP rollout and migration planning</li>
+          <li>Vendor evaluation and integration support</li>
+          <li>Customer experience and ChatOps enablement</li>
+        </ul>
+      </article>
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-soft transition-shadow">
+        <h3 class="font-bold text-lg">Training & Documentation</h3>
+        <ul class="mt-3 space-y-2 text-sm leading-relaxed list-disc list-inside">
+          <li>Team training on RouterOS v7, BGP, IPv6</li>
+          <li>HLD/LLD docs, playbooks, change plans</li>
+          <li>Post-mortem and RCA frameworks</li>
+          <li>Knowledge base and runbooks</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-    <section id="contact" class="section card">
-      <h2>Contact</h2>
-      <div class="links-row">
-        <a class="btn primary" href="mailto:me@geekpraveen.in?subject=Hello%20Praveen&body=Hi%20Praveen%2C%0A%0AI'm%20reaching%20out%20about..." rel="noopener">Email</a>
-        <a class="btn" href="https://github.com/praveengite" target="_blank" rel="noopener">GitHub</a>
+  <!-- Expertise -->
+  <section id="expertise" class="page section max-w-6xl mx-auto px-4 py-12 lg:py-16">
+    <h2 class="text-2xl font-extrabold tracking-tight">Technical Expertise</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6">
+        <table class="w-full text-sm">
+          <tbody class="[&_td]:py-2 [&_td]:align-top">
+            <tr>
+              <td class="font-semibold w-48 text-slate-600">Routing & Switching</td>
+              <td>MikroTik RouterOS v7, D-Link, TP-Link, Arista, Huawei</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">Traffic Engineering</td>
+              <td>BGP, Large Communities, MPLS, OSPF, ECMP, PBR</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">Monitoring & Analysis</td>
+              <td>Akvorado, LibreNMS, The Dude, Grafana, Zabbix</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">Security</td>
+              <td>Firewall/NAT policies, DDoS containment, IP filtering</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">IPv6 & Dual Stack</td>
+              <td>DHCPv6, PD, SLAAC, PPPoE, routing design</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">Automation</td>
+              <td>RouterOS scripting, API, Linux/Bash</td>
+            </tr>
+            <tr>
+              <td class="font-semibold text-slate-600">Systems</td>
+              <td>Ubuntu Server, Docker, NetBox, Chatwoot, Ansible (basic)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
 
-    <footer>
-      © <span id="y"></span> Praveen Gite · Winux — Growth Without Limits
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="page section max-w-3xl mx-auto px-4 py-12 lg:py-16">
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+      <h2 class="text-2xl font-extrabold tracking-tight">Contact</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm">
+        <a href="mailto:me@geekpraveen.in" class="rounded-2xl border border-brand-300 px-4 py-3 font-semibold hover:bg-brand-50">e-mail</a>
+        <a href="https://www.linkedin.com/in/praveengite" class="rounded-2xl border border-brand-300 px-4 py-3 font-semibold hover:bg-brand-50">linkedin</a>
+        <a href="https://x.com/praveengite" class="rounded-2xl border border-brand-300 px-4 py-3 font-semibold hover:bg-brand-50">x: formerly twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-center gap-2">
+        <svg width="20" height="14" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 6.5c3.2-3.2 8.4-3.2 11.6 0l1.4 1.4 1.4-1.4c3.2-3.2 8.4-3.2 11.6 0 3.2 3.2 3.2 8.4 0 11.6-3.2 3.2-8.4 3.2-11.6 0l-1.4-1.4-1.4 1.4c-3.2 3.2-8.4 3.2-11.6 0-3.2-3.2-3.2-8.4 0-11.6z" fill="#9fd1ff"/>
+        </svg>
+        <span>© <span id="year"></span> Winux — We help You win</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
