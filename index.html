@@ -210,7 +210,68 @@
       </article>
     </div>
   </section>
-
+  <section id="articles" class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+  <h2 class="text-2xl font-extrabold">“Why Small ISPs Face Downtime — and How to Eliminate It”</h2>
+  <ul class="mt-6 space-y-2 text-sm list-disc list-inside">
+		<p>In many Tier-2 and Tier-3 networks, one big reason for frequent internet outages is dependence on a single router. That one device is made to do everything: manage users, route traffic, handle NAT, and even work as a DNS server. When that router crashes or restarts, the entire network goes down.</p>
+		<p>The solution isn’t always buying more expensive hardware. Real reliability comes from how the network is organized.</p>
+		<p>You can divide your network into clear parts:
+		<li>Edge layer: connects to your customers.</li>
+		<li>Core layer: manages the main traffic flow between routers.</li>
+		<li>Service layer: handles tasks like PPPoE, NAT, and DNS.</li>
+		</p>
+		<p>By separating these functions across devices or VLANs, you prevent one failure from affecting the whole system. Also, by isolating broadcast traffic and setting up automatic backup routes (failover), your network can keep running even if one part fails. Even with low-cost equipment, a well-planned structure can perform like an enterprise network Good design is more powerful than expensive devices.</p>
+  </ul>
+  </section>
+    <section id="articles" class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+  <h2 class="text-2xl font-extrabold">“How Indian ISPs Waste Bandwidth Without Knowing It”</h2>
+  <ul class="mt-6 space-y-2 text-sm list-disc list-inside">
+		<p>Every Internet Service Provider spends a large part of their money on bandwidth every month. But not everyone uses it wisely. Many networks lose around 10–15% of their total bandwidth without even realizing it.</p>
+		<p>This waste doesn’t happen because customers are using too much data. It happens because the network isn’t managed properly. When cables, routers, or traffic routes aren’t set up in an organized way, small problems add up and quietly eat away at your bandwidth.</p>
+		<p>By using simple monitoring tools that show where and how your bandwidth is being used, you can easily find these hidden issues. Once you can see the problem clearly, it becomes much easier to fix it.</p>
+		<p>In short — if you don’t measure your network, you can’t improve it.</p>
+  </ul>
+  </section>
+      <section id="articles" class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+  <h2 class="text-2xl font-extrabold">“The Hidden Cost of Using Bridge Mode for Everything”</h2>
+  <ul class="mt-6 space-y-2 text-sm list-disc list-inside">
+		<p>Many local cable operators (LCOs) use bridge mode on several switches because it seems like the easiest way to set up their network. But this “simple” method often causes big problems.</p>
+		<p>It leads to things like:
+		<li>Broadcast storms — when too much unnecessary traffic spreads across the network.</li>
+		<li>Unstable connections — customers suddenly get disconnected or can’t log in.</li>
+		<li>Network loops — data keeps circling between devices, slowing everything down.</li></p>
+		<p>The right way is to divide the network properly using VLANs (Virtual LANs).
+		<li>Use one VLAN for backhaul traffic (the main connection between switches).</li>
+		<li>Another for customers (user connections).</li>
+		<li>And one for management (your routers and network devices).</li></p>
+		<p>When each part of the network has its own section, the data moves only where it should. This makes the network stable, faster, and easier to manage.</p>
+  </ul>
+  </section>
+      <section id="articles" class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+  <h2 class="text-2xl font-extrabold">“BGP: The Small ISP’s Best Investment”</h2>
+  <ul class="mt-6 space-y-2 text-sm list-disc list-inside">
+		<p>Many small ISPs still rely on just one internet provider for their main connection. This creates serious problems — slow speeds when the link is busy, no backup if the line fails, and complete disconnection if the fiber is cut.</p>
+		<p>There’s a better way. It’s called BGP (Border Gateway Protocol). Earlier, people thought BGP was only for big companies, but now even small ISPs can use it easily.</p>
+		<p>With two internet connections and a basic BGP setup, your network can:
+		<li>Share or balance traffic between both links.</li>
+		<li>Stay online automatically if one connection goes down.</li>
+		<li>Choose the best route for faster access to websites and CDNs like Google or Netflix.</li></p>
+		<p>You don’t need to buy more bandwidth to get a stable network. What matters is smart routing — letting your system automatically pick the best and fastest path for every user.</p>
+  </ul>
+  </section>
+      <section id="articles" class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+  <h2 class="text-2xl font-extrabold">“Building a Compliant ISP Network Under DoT Guidelines”</h2>
+  <ul class="mt-6 space-y-2 text-sm list-disc list-inside">
+		<p>Every licensed ISP in India must keep proper records of which user was using which IP address at any given time, and be ready to share that information with the authorities if required. This is called subscriber traceability and lawful interception readiness.</p>
+		<p>But in many small or Tier-3 networks, especially those run by LCOs, this part is often ignored. They focus on quick expansion and customer growth, but don’t maintain proper logs or documentation. Then, when the Department of Telecommunications (DoT) sends a notice, there’s confusion and panic.</p>
+		<p>The good news is that compliance doesn’t need costly equipment.
+		It only requires:
+		<li>Systematic IP allocation — assigning IPs in an organized way.</li>
+		<li>Session logging — keeping track of which customer used which IP and when.</li>
+		<li>Data storage policies — saving these logs safely for a set time period.</li></p>
+		<p>Following these simple steps keeps your network legally safe and also helps in troubleshooting and accountability. It’s not just a rule — it’s a way to run your network more professionally.</p>
+  </ul>
+  </section>
   <!-- Contact -->
   <section id="contact" class="page section max-w-3xl mx-auto px-4 py-12 lg:py-16">
     <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
@@ -240,6 +301,7 @@
   </script>
 </body>
 </html>
+
 
 
 
